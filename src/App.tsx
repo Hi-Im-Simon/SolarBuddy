@@ -17,14 +17,14 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <header className="flex items-center justify-between w-full p-4 shadow-md">
           <h1 className="text-2xl font-bold">
-            <Link to="/SolarBuddy">SolarBuddy</Link>
+            <Link to="/SolarBuddy/">SolarBuddy</Link>
           </h1>
           <Navigation />
         </header>
 
         <div className="flex-grow">
           <Routes>
-            <Route path="/SolarBuddy" element={<HomePage />} />
+            <Route path="/SolarBuddy/" element={<HomePage />} />
             <Route path="/SolarBuddy/produkt" element={<ProductPage />} />
             <Route path="/SolarBuddy/gra" element={<GamePage />} />
             <Route path="/SolarBuddy/o-nas" element={<AboutPage />} />
@@ -42,11 +42,15 @@ export default function App() {
 }
 
 const links = [
-  { to: "/SolarBuddy", label: "Strona główna" },
-  { to: "/SolarBuddy/produkt", label: "Produkt" },
-  { to: "/SolarBuddy/gra", label: "Gra Energy Tycoon!", style: "text-red-400" },
-  { to: "/SolarBuddy/o-nas", label: "O nas" },
-  { to: "/SolarBuddy/kontakt", label: "Kontakt" },
+  { to: "/SolarBuddy/", label: "Strona główna" },
+  { to: "/SolarBuddy/produkt/", label: "Produkt" },
+  {
+    to: "/SolarBuddy/gra/",
+    label: "Gra Energy Tycoon!",
+    style: "text-red-400",
+  },
+  { to: "/SolarBuddy/o-nas/", label: "O nas" },
+  { to: "/SolarBuddy/kontakt/", label: "Kontakt" },
 ];
 
 function Navigation() {

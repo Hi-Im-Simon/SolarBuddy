@@ -1,3 +1,5 @@
+import usImg from "/us.jpg";
+
 export default function AboutPage() {
   return (
     <main className="w-full max-w-4xl p-6 mx-auto space-y-6">
@@ -8,7 +10,7 @@ export default function AboutPage() {
         każdego domu.
       </p>
 
-      <img src="./us.jpg" alt="Us" className="rounded-xl" />
+      <img src={usImg} alt="Us" className="rounded-xl" />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>

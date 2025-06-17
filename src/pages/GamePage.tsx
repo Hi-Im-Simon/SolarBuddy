@@ -6,7 +6,7 @@ export default function GamePage() {
       <h3 className="text-3xl font-semibold">Zagraj w Energy Tycoon</h3>
       <p>
         Klikaj, inwestuj, rozwijaj farmy słoneczne i zdobywaj realne nagrody
-        (już wkrótce)!!
+        (już wkrótce)!
       </p>
       <EnergyTycoon />
     </main>

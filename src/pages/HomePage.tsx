@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import companyLogosImg from "/company-logos.png";
+import gamePromoImg from "/game-promo.png";
 
 const faq = [
   {
@@ -82,9 +84,9 @@ export default function HomePage() {
     <main className="flex flex-col items-center w-full max-w-4xl p-6 mx-auto space-y-16">
       <h2 className="text-4xl font-bold">SolarBuddy – Twoje domowe słońce</h2>
 
-      <Link to="/SolarBuddy/sklep">
+      <Link to="/SolarBuddy/sklep/">
         <img
-          src="./game-promo.png"
+          src={gamePromoImg}
           alt="Promocja SolarBuddy"
           className="max-w-4xl w-sm rounded-2xl"
         />
@@ -94,7 +96,7 @@ export default function HomePage() {
         <p className="m-0 text-lg">
           Zagraj w "Energy Tycoon" i zbuduj własne imperium energii!
         </p>
-        <Link to="/SolarBuddy/gra" className="text-3xl hover:underline">
+        <Link to="/SolarBuddy/gra/" className="text-3xl hover:underline">
           Zagraj teraz!
         </Link>
       </div>
@@ -104,7 +106,7 @@ export default function HomePage() {
         <h3 className="text-2xl font-semibold">Zaufali nam</h3>
         <center>
           <img
-            src="./company-logos.png"
+            src={companyLogosImg}
             alt="Loga firm które nam zaufały"
             className="h-24 w-fit"
           />

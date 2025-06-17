@@ -1,10 +1,12 @@
+import productImg from "/product.png";
+
 export default function ProductPage() {
   return (
     <main className="w-full max-w-4xl p-6 mx-auto space-y-6">
       <h3 className="mb-4 text-3xl font-semibold">Poznaj SolarBuddy</h3>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <img
-          src="./product.png"
+          src={productImg}
           alt="Panel SolarBuddy"
           className="shadow-md rounded-2xl"
         />
