@@ -17,19 +17,19 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <header className="flex items-center justify-between w-full p-4 shadow-md">
           <h1 className="text-2xl font-bold">
-            <Link to="/">SolarBuddy</Link>
+            <Link to="/SolarBuddy">SolarBuddy</Link>
           </h1>
           <Navigation />
         </header>
 
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/produkt" element={<ProductPage />} />
-            <Route path="/gra" element={<GamePage />} />
-            <Route path="/o-nas" element={<AboutPage />} />
-            <Route path="/kontakt" element={<ContactPage />} />
-            <Route path="/sklep" element={<h1>TODO</h1>} />
+            <Route path="/SolarBuddy" element={<HomePage />} />
+            <Route path="/SolarBuddy/produkt" element={<ProductPage />} />
+            <Route path="/SolarBuddy/gra" element={<GamePage />} />
+            <Route path="/SolarBuddy/o-nas" element={<AboutPage />} />
+            <Route path="/SolarBuddy/kontakt" element={<ContactPage />} />
+            <Route path="/SolarBuddy/sklep" element={<h1>TODO</h1>} />
           </Routes>
         </div>
 
@@ -42,11 +42,11 @@ export default function App() {
 }
 
 const links = [
-  { to: "/", label: "Strona główna" },
-  { to: "/produkt", label: "Produkt" },
-  { to: "/gra", label: "Gra Energy Tycoon!", style: "text-red-400" },
-  { to: "/o-nas", label: "O nas" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/SolarBuddy", label: "Strona główna" },
+  { to: "/SolarBuddy/produkt", label: "Produkt" },
+  { to: "/SolarBuddy/gra", label: "Gra Energy Tycoon!", style: "text-red-400" },
+  { to: "/SolarBuddy/o-nas", label: "O nas" },
+  { to: "/SolarBuddy/kontakt", label: "Kontakt" },
 ];
 
 function Navigation() {

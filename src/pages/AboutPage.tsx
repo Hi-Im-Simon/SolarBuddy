@@ -8,7 +8,7 @@ export default function AboutPage() {
         każdego domu.
       </p>
 
-      <img src="/us.jpg" alt="Us" className="rounded-xl" />
+      <img src="./us.jpg" alt="Us" className="rounded-xl" />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>

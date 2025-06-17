@@ -207,7 +207,7 @@ export default function EnergyTycoon() {
           {showPromo === "SolarBuddy"
             ? "🌞 Odblokowałeś SolarBuddy w grze – "
             : "Świetnie Ci idzie generowanie energii! "}
-          <Link to="/sklep" className="hover:underline">
+          <Link to="/SolarBuddy/sklep" className="hover:underline">
             {showPromo === "SolarBuddy"
               ? "sprawdź go w realu!"
               : "Wypróbuj SolarBuddy!"}

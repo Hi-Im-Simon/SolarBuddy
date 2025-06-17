@@ -4,7 +4,7 @@ export default function ProductPage() {
       <h3 className="mb-4 text-3xl font-semibold">Poznaj SolarBuddy</h3>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <img
-          src="/product.png"
+          src="./product.png"
           alt="Panel SolarBuddy"
           className="shadow-md rounded-2xl"
         />
