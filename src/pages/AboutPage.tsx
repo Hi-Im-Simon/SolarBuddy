@@ -7,21 +7,21 @@ export default function AboutPage() {
         celem jest dostarczenie prostych i efektywnych rozwiązań solarnych dla
         każdego domu.
       </p>
+
+      <img src="/us.jpg" alt="Us" className="rounded-xl" />
+
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
           <h4 className="font-semibold">Zespół</h4>
           <ul className="list-disc list-inside">
-            <li>Szymon Stanisławski – CEO</li>
-            <li>Piotr Polcyn – CEO</li>
-            <li>Adam Adamski – CTO</li>
-            <li>Karol Karolak – Marketing</li>
+            <li>Kacper Kacperski – CEO</li>
+            <li>Malina Malinowska – CTO</li>
+            <li>Karolina Karolak – Marketing</li>
+            <li>Anastazja Tacka – Development</li>
+            <li>Adam Adamski – Development</li>
+            <li>Bogna Bagno – Księgowość</li>
           </ul>
         </div>
-        <img
-          src="/skyscraper-ad.jpg"
-          alt="Reklama boczna"
-          className="rounded-xl"
-        />
       </div>
     </main>
   );

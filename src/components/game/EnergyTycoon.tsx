@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import { calcPrice, getPlayTime } from "./utils";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 
 type Upgrade = {
   type: "clickBoost" | "passiveBoost" | "priceBoost";
@@ -84,12 +85,15 @@ export default function EnergyTycoon() {
     "energyPerSecond",
     0
   );
-  const [pricePerUnit, setPricePerUnit] = useLocalStorage("pricePerUnit", 10);
+  const [pricePerUnit, setPricePerUnit] = useLocalStorage("pricePerUnit", 2);
   const [upgrades, setUpgrades] = useLocalStorage<Upgrade[]>(
     "upgrades",
     _.cloneDeep(defaultUpgrades)
   );
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [showPromo, setShowPromo] = useState<"SolarBuddy" | "generic" | false>(
+    false
+  );
 
   const generateEnergy = () => {
     setEnergy((prev) => prev + energyPerClick);
@@ -130,6 +134,14 @@ export default function EnergyTycoon() {
               setPricePerUnit((prev) => prev * upgrades[id].baseBonus);
             }
             break;
+        }
+
+        if (upgrades[id].name.includes("SolarBuddy")) {
+          setShowPromo("SolarBuddy");
+          setTimeout(() => setShowPromo(false), 15000);
+        } else if (upgrades[id].nBought % 5 === 0) {
+          setShowPromo("generic");
+          setTimeout(() => setShowPromo(false), 15000);
         }
       }
     }
@@ -182,6 +194,26 @@ export default function EnergyTycoon() {
       )}
 
       <h1 className="text-3xl font-bold text-yellow-600">☀️ Energy Tycoon</h1>
+
+      {showPromo && (
+        <div className="relative px-4 py-3 mt-2 text-sm text-yellow-800 bg-yellow-100 border border-yellow-400 rounded shadow animate-pulse">
+          <button
+            onClick={() => setShowPromo(false)}
+            className="absolute top-auto text-lg font-bold text-yellow-800 mt-[-3px] right-2 hover:text-red-500"
+            aria-label="Zamknij"
+          >
+            ×
+          </button>
+          {showPromo === "SolarBuddy"
+            ? "🌞 Odblokowałeś SolarBuddy w grze – "
+            : "Świetnie Ci idzie generowanie energii! "}
+          <Link to="/sklep" className="hover:underline">
+            {showPromo === "SolarBuddy"
+              ? "sprawdź go w realu!"
+              : "Wypróbuj SolarBuddy!"}
+          </Link>
+        </div>
+      )}
 
       <div className="space-y-2">
         <p className="text-lg">
